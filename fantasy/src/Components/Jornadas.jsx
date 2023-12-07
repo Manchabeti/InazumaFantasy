@@ -18,6 +18,7 @@ const MiComponente = () => {
   ];
   const token = localStorage.getItem('token');
   const navigate = useNavigate();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -30,7 +31,7 @@ const MiComponente = () => {
         setJornadas(jornadasResponse.data.data);
 
         if (jornadasResponse.data.data.length > 0) {
-          setSelectedJornada(jornadasResponse.data.data[0].id);
+          setSelectedJornada(jornadasResponse.data.data[jornadasResponse.data.data.length - 1].id);
         }
       } catch (error) {
         console.error('Error fetching jornadas:', error);
@@ -103,7 +104,7 @@ const MiComponente = () => {
       setJornadas(jornadasResponse.data.data);
 
       if (jornadasResponse.data.data.length > 0) {
-        setSelectedJornada(jornadasResponse.data.data[0].id);
+        setSelectedJornada(jornadasResponse.data.data[jornadasResponse.data.data.length - 1].id);
       }
     } catch (error) {
       console.error('Error fetching jornadas:', error);

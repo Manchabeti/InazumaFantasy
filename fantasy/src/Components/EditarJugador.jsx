@@ -3,11 +3,13 @@ import axios from 'axios';
 import { useLocation, useParams } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
 import Header from './Header';
+import { useNavigate } from 'react-router-dom';
 
 const EditarJugador = () => {
   const token = localStorage.getItem('token');
   const datosJugador = JSON.parse(localStorage.getItem('datosJugador'));
   const { id } = useParams();
+  const navigate = useNavigate();
   const [errors, setErrors] = useState({
     nombre: '',
     apodo: '',
@@ -42,9 +44,10 @@ const EditarJugador = () => {
   const [showErrorModal, setShowErrorModal] = useState(false);
   const handleCloseSuccessModal = () => setShowSuccessModal(false);
   const handleShowSuccessModal = () => setShowSuccessModal(true);
-  const handleCloseConfirmDeleteModal = () => setShowConfirmDeleteModal(false);
   const handleShowConfirmDeleteModal = () => setShowConfirmDeleteModal(true);
-
+  const handleCloseConfirmDeleteModal = () => {
+    setShowConfirmDeleteModal(false);
+  }
   useEffect(() => {
     setLoading(true);
  
@@ -147,6 +150,7 @@ const EditarJugador = () => {
 
       handleCloseConfirmDeleteModal(); 
       console.log(response.data);
+      navigate('/adminIndex');
     } catch (error) {
       handleCloseConfirmDeleteModal();
       console.error('Error al borrar el jugador:', error);
