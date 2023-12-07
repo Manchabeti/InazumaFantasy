@@ -1,0 +1,32 @@
+/* UsuarioTarjeta.css */
+.usuario-tarjeta {
+    background-color: orange;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .usuario-tarjeta.primero {
+    background-color: gold; /* Cambiar el color si es el primero */
+  }
+  
+  .posicion {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .usuario-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .usuario-nombre {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .usuario-puntos {
+    font-size: 14px;
+  }

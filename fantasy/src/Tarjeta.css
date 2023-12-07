@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.tarjeta {
+    display: flex;
+    background-color: #549cc7; /* Fondo azul oscuro */
+    color: #ffffff; /* Texto blanco */
+    border-radius: 2px;
+    overflow: hidden;
+    width: 400px; /* Puedes ajustar el tamaño según tus necesidades */
+    border: 2px solid #1a1a1a;
+    position: relative;
+    text-align: left;
+  
+  }
+  .tarjeta-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide el contenedor en tres columnas de igual tamaño */
+    gap: 16px; /* Espacio entre las tarjetas */
+  }
+  
+  .imagen-container {
+    background-color: #3e6ca0;
+    border-right: 2px solid #1a1a1a; /* Borde azul oscuro a la derecha */
+    padding: 10px;
+  }
+  
+  .imagen {
+    background-color: #20436f;
+    width: 100%; /* Ajusta el tamaño de la imagen según tus necesidades */
+    border: 2px solid #1a1a1a; /* Borde azul oscuro alrededor de la imagen */
+    border-radius: 4px;
+    height: 76px;
+  }
+  
+  .info {
+    padding: 10px;
+  }
+  
+  .nombre {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #20436f;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+  }
+  
+  .apodo {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  
+  .media {
+    margin-top: 8px;
+  }
+
+  .editar-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ff8c00;
+    padding: 3px 8px; /* Ajusta el padding para hacer el botón más pequeño */
+    border-radius: 4px; /* Ajusta el border-radius según tus preferencias */
+    cursor: pointer;
+  }
+
+  .editar-btn:hover {
+    background-color: #ff8c00;
+    color: #000000;
+  }
+
+  @media (max-width: 1200px) {
+    .tarjeta-container {
+      grid-template-columns: repeat(2, 1fr);  /* Cambia a una sola columna cuando el ancho de la pantalla es 768px o menos */
+    }
+  }
+  @media (max-width: 768px) {
+    .tarjeta-container {
+      grid-template-columns: 1fr; /* Cambia a una sola columna cuando el ancho de la pantalla es 768px o menos */
+    }
+  }
+

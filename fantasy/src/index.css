@@ -1,0 +1,170 @@
+/* Importar la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+
+.login-container {
+  flex-direction: column; /* Cambiado a columna para centrar y pegar arriba */
+  align-items: center; /* Centra horizontalmente */
+  position: relative;
+  text-align: center; /* Centra el contenido horizontalmente */
+}
+
+.error-message {
+  background-color: #ff6347;
+  color: #fff;
+  border: 2px solid #8b0000;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+
+}
+
+.logo {
+  position: absolute;
+  top: 20px;  /* Ajustado para centrar verticalmente y pegar arriba */
+  left: 50%;
+  transform: translateX(-50%); /* Centra exactamente */
+  width: 500px;
+  height: auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ef7300;
+  border: 2px solid #7c2908;
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Ajustado para dar espacio desde arriba */
+}
+
+label {
+  margin-bottom: 8px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 55px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 4px solid #ff8c00;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.edit-button {
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #ffffff;
+  border: 4px solid #ff8c00;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  height: 42px;
+}
+
+.login-button svg {
+  margin-right: 8px;
+}
+
+.login-button span {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.login-button:hover {
+  background-color: #ff8c00;
+  color: #000000;
+}
+
+.edit-button:hover {
+  background-color: #ff8c00;
+  color: #000000;
+}
+
+.rotating-image {
+  display: block;
+  margin: 50px auto; /* Ajusta el margen según tus preferencias */
+  animation: rotate 2s linear infinite; /* 2s para un giro completo, ajusta según tus preferencias */
+}
+
+.crear-jugador-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 4px solid #ff8c00;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.crear-jugador-button:hover {
+  background-color: #ff8c00;
+  color: #000000;
+}
+
+.error-tarjeta {
+  background-color: #ff6347;
+  color: #fff;
+  border: 2px solid #8b0000;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  width: 300px; /* Puedes ajustar el tamaño según tus necesidades */
+  position: relative;
+  display: flex;
+}
+.aling-all{
+  display: flex;
+
+  flex-direction: column;
+  
+  justify-content: center;
+}
+.main-container{
+  width: 80vw;
+  flex-direction: column; /* Cambiado a columna para centrar y pegar arriba */
+  align-items: center; 
+}
+
+.modal-content{
+  color:#000000;
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
