@@ -106,6 +106,8 @@ input {
 .rotating-image {
   display: block;
   margin: 50px auto; /* Ajusta el margen según tus preferencias */
+  width: 25%; /* Ajusta el ancho según tus preferencias */
+  height: 25%; /* Ajusta la altura según tus preferencias */
   animation: rotate 2s linear infinite; /* 2s para un giro completo, ajusta según tus preferencias */
 }
 

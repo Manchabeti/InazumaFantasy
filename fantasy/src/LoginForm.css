@@ -28,4 +28,34 @@
     color: orange;
   }
 
-  
+
+  .myButton {
+    background-color: orange;
+    border: 1px solid black;
+    color: black;
+    transition: background-color 0.3s, color 0.3s; /* Agregamos transición suave */
+  }
+
+  .myButton:hover {
+    background-color: darkorange; /* Cambia el color de fondo al pasar el mouse */
+    color: white; /* Cambia el color del texto al pasar el mouse */
+  }
+
+/* Estilos para el select */
+#jornadaSelect {
+  background-color: darkorange; /* Naranja más oscuro */
+  border: 1px solid black;
+  padding: 8px; /* Ajusta el relleno para hacerlo un poco más grande */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+}
+
+/* Estilos para las opciones del select */
+#jornadaSelect option {
+  background-color: orange; /* Naranja para las opciones */
+  color: black; /* Texto negro para las opciones */
+}
+
+/* Estilos para la opción seleccionada */
+#jornadaSelect option:checked {
+  background-color: darkorange; /* Naranja más oscuro para la opción seleccionada */
+}

@@ -40,25 +40,26 @@ const JugadorCard = ({ nombre, apodo, media, equipo, foto, posicion, puntos_tota
   };
 
   return (
-    <div className="cardJugador mb-3"> 
-      <div className="playerContainer">
-        <div className="playerImageContainer">
-          <img src={foto} alt={nombre} className="playerImage" />
-          <img src={equipo.escudo} alt={equipo.nombre} className="teamBadge" />
-        </div>
+    <div className="cardJugador"> 
+  <div className="playerContainer">
+    <div className="playerImageContainer">
+      <img src={foto} alt={nombre} className="playerImage" />
+      <img src={equipo.escudo} alt={equipo.nombre} className="teamBadge" />
+    </div>
 
-        <div className="playerDetails">
-          <div className="detailText">{nombre}</div>
-          <div className="detailText">{apodo}</div>
-          <div className="detailText">Media: {media}</div>
-          <div className="detailText">Posición: <img src={`../../public/${posicion}.png`}/></div>
-          <div className="detailText">Puntos Totales: {puntos_totales}</div>
-        </div>
-      </div>
+    <div className="playerDetails">
+      <div className="detailText">{nombre}</div>
+      <div className="detailText">{apodo}</div>
+      <div className="detailText">Media: {media}</div>
+      <div className="detailText">Posición: <img src={`../../public/${posicion}.png`} alt={posicion} /></div>
+      <div className="detailText">Puntos Totales: {puntos_totales}</div>
+    </div>
+  </div>
 
-      <button className="sellButton btn btn-danger" onClick={handleVenderClick}>
-        Vender
-      </button>
+  <button className="sellButton" onClick={handleVenderClick}>
+    Vender
+  </button>
+
 
       {/* Modal Venta*/}
       <div className={`modal ${showVenderModal ? 'show' : ''}`} tabIndex="-1" role="dialog" style={{ display: showVenderModal ? 'block' : 'none' }}>
