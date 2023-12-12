@@ -16,7 +16,7 @@ const EditarJugador = () => {
     media: '',
     posicion_id: '',
     equipo_id: '',
-    foto: ''
+    foto: ''    
   });
   const [loading, setLoading] = useState(false);
 
@@ -63,7 +63,6 @@ const EditarJugador = () => {
             Authorization: `Bearer ${token}`,
           },
         });
-
         setEquipos(equiposResponse.data.data);
         setPosiciones(posicionesResponse.data.data);
       } catch (error) {
