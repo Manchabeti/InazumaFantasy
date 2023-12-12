@@ -150,19 +150,25 @@ const MiComponente = () => {
         </Button>
 
         <div className="mt-3">
-          <h2>Puntuaciones:</h2>
-          <ul>
-            {puntuaciones.map((puntuacion, index) => (
-              <UsuarioTarjeta
-                key={puntuacion.usuario}
-                usuario={puntuacion.usuario}
-                puntos={puntuacion.puntos_totales}
-                posicion={index + 1}
-                esPrimero={index === 0}
-              />
-            ))}
-          </ul>
-        </div>
+  <h2>Puntuaciones:</h2>
+  {puntuaciones.length === 0 ? (
+     <div className="alert alert-danger rounded">
+     No se han jugado jornadas aún.
+   </div>
+  ) : (
+    <ul>
+      {puntuaciones.map((puntuacion, index) => (
+        <UsuarioTarjeta
+          key={puntuacion.usuario}
+          usuario={puntuacion.usuario}
+          puntos={puntuacion.puntos_totales}
+          posicion={index + 1}
+          esPrimero={index === 0}
+        />
+      ))}
+    </ul>
+  )}
+</div>
 
         <Modal show={showModal} onHide={handleModalClose}>
           <Modal.Header closeButton>

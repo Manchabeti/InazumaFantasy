@@ -168,10 +168,12 @@ const EditarJugador = () => {
   return (
     <div>
       <Header menuItems={menuItems} />
+      {loading && <img src="../../public/carga.png" alt="Rotating Image" className="rotating-image" />}
+      {!loading && (
       <div className="d-flex align-items-center justify-content-center vh-100">
-        {loading && <img src="../../public/carga.png" alt="Rotating Image" className="rotating-image" />}
-        {!loading && (
-          <form onSubmit={handleSubmit} className="text-center w-50 p-4 border rounded bg-warning mt-2">
+        
+        
+          <form onSubmit={handleSubmit} className="text-center p-4 border rounded bg-warning mt-1">
             <label>
               Nombre:
               <input type="text" name="nombre" value={datos.nombre} onChange={handleChange} className="form-control" />
@@ -225,7 +227,7 @@ const EditarJugador = () => {
             <button type="submit" className="btn btn-primary">Editar</button>
             <button onClick={handleDelete} className="btn btn-danger">Eliminar Jugador</button>
           </form>
-        )}
+        
         {/* Modal de éxito */}
         <Modal show={showSuccessModal} onHide={handleCloseSuccessModal}>
           <Modal.Header closeButton>
@@ -267,7 +269,9 @@ const EditarJugador = () => {
           </Modal.Footer>
         </Modal>
       </div>
+      )}
     </div>
+    
   );
 };
 

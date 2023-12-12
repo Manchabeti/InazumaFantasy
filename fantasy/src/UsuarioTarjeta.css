@@ -25,8 +25,10 @@
   .usuario-nombre {
     font-size: 18px;
     font-weight: bold;
+    text-align: left;
   }
   
   .usuario-puntos {
     font-size: 14px;
+    text-align: left;
   }

@@ -46,6 +46,7 @@ const LoginForm = () => {
     <div>
       <Header menuItems={menuItems} />
       <div className="container d-flex flex-column align-items-center vh-100 mb-auto">
+      <img src="../../public/login.png" alt="Login" className="login-image img-fluid mx-auto" style={{ maxWidth: '350px' }} />
         <div className="login-container">
           <form onSubmit={handleLogin} className="login-form">
             <label>Usuario:</label>
